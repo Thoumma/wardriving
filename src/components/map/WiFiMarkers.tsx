@@ -6,7 +6,6 @@ import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import {
   type WiFiData,
-  getSignalColor,
   getSignalStrength,
   getSecurityLevel,
 } from "@/type/wifi";
@@ -51,7 +50,6 @@ const getIconForSignal = (signal: number): L.Icon => {
 const createSingleWiFiPopup = (wifi: WiFiData): string => {
   const security = getSecurityLevel(wifi.AUTHENTICATION);
   const signalStrength = getSignalStrength(wifi.signal);
-  const signalColor = getSignalColor(wifi.signal);
 
   const getSignalBadgeClass = (signal: number) => {
     if (signal >= -50) return "bg-green-500";
@@ -130,7 +128,7 @@ const createSingleWiFiPopup = (wifi: WiFiData): string => {
             <tbody>
               ${tableRows
       .map(
-        (row, index) => `
+        (row) => `
               <tr class="border-b hover:bg-gray-50 transition-colors">
                 <td class="py-2 px-2 sm:px-3 lg:py-3 lg:px-4 font-medium text-xs sm:text-sm lg:text-base text-gray-900">
                   <div class="flex items-center gap-1 sm:gap-2 lg:gap-3">

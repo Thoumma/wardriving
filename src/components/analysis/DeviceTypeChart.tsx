@@ -3,6 +3,7 @@
 // src/components/analysis/DeviceTypeChart.tsx
 // ========================================
 
+import { useMemo } from "react";
 import { LabelList, Pie, PieChart } from "recharts";
 
 import {
@@ -39,7 +40,7 @@ const deviceChartConfig = {
 
 export function DeviceTypeChart() {
   const { wifiData, loading } = useWiFiDataDev()
-  const chartData = React.useMemo(() => {
+  const chartData = useMemo(() => {
     if (loading || !wifiData.length) return []
     return getDeviceTypeDistribution(wifiData)
   }, [wifiData, loading])

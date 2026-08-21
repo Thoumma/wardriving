@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import MapAside from "@/layouts/map_layout/MapAside";
 import MapNav from "@/layouts/map_layout/MapNav";
 import MapComponent from "@/components/MapComponent"; // Adjust path as needed
-import { LocationPosition } from "@/utils/locationUtils";
+import type { LocationPosition } from "@/utils/locationUtils";
 
 export default function MapPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

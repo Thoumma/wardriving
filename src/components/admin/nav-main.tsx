@@ -1,6 +1,7 @@
 "use client"
 
-import { ChevronRight, type LucideIcon } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import type { ElementType } from "react"
 import { Link, useLocation } from "react-router-dom"
 
 import {
@@ -25,7 +26,7 @@ export function NavMain({
   items: {
     title: string
     url: string
-    icon?: LucideIcon
+    icon?: ElementType
     isActive?: boolean
     items?: {
       title: string

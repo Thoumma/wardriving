@@ -78,7 +78,7 @@ export const loadCSVFromPath = async (path: string): Promise<WiFiData[]> => {
           console.log(`Parsed ${data.length} rows, ${validData.length} valid entries`);
           resolve(validData as WiFiData[]);
         },
-        error: (error) => {
+        error: (error: Error) => {
           reject(new Error(`Parse error: ${error.message}`));
         },
       });

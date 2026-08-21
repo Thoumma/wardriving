@@ -1,8 +1,6 @@
 "use client"
 
-import {
-  type LucideIcon,
-} from "lucide-react"
+import type { ElementType } from "react"
 import { Link, useLocation } from "react-router-dom"
 
 import {
@@ -19,7 +17,7 @@ export function NavProjects({
   projects: {
     name: string
     url: string
-    icon: LucideIcon
+    icon: ElementType
   }[]
 }) {
   const location = useLocation()

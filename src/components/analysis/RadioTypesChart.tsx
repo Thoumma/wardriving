@@ -1,8 +1,7 @@
 "use client"
 
-import * as React from "react"
 import { Label, Pie, PieChart, Sector } from "recharts"
-import { PieSectorDataItem } from "recharts/types/polar/Pie"
+import type { PieSectorDataItem } from "recharts/types/polar/Pie"
 
 import {
   Card,
@@ -12,12 +11,12 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import {
-  ChartConfig,
   ChartContainer,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import type { ChartConfig } from "@/components/ui/chart"
 
 export const description = "WiFi Radio Types Distribution"
 

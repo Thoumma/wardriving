@@ -5,6 +5,7 @@
 // src/components/analysis/SignalStrengthChart.tsx
 // ========================================
 
+import { useMemo } from "react";
 import {
   Card as CardSig,
   CardContent as CardContentSig,
@@ -32,7 +33,7 @@ const signalChartConfig = {
 
 export function SignalStrengthChart() {
   const { wifiData, loading } = useWiFiDataSig()
-  const chartData = React.useMemo(() => {
+  const chartData = useMemo(() => {
     if (loading || !wifiData.length) return []
     return getSignalStrengthHistogram(wifiData)
   }, [wifiData, loading])
