@@ -16,7 +16,6 @@ import { TeamSwitcher } from "@/components/admin/team-switcher";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
